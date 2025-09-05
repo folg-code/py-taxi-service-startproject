@@ -12,11 +12,11 @@ class Driver(AbstractUser):
     license_number = models.CharField(max_length=100, unique=True)
 
     def __str__(self):
-        return f"{self.username} ({self.license_number})"
+        return self.username
 
     class Meta:
-        verbose_name = "Driver"
-        verbose_name_plural = "Drivers"
+        verbose_name = "driver"
+        verbose_name_plural = "drivers"
 
 
 class Car(models.Model):
